@@ -58,12 +58,12 @@
       box-shadow: 0 4px 14px rgba(0,0,0,0.2);
     }
     .btn:hover { background: #333; }
-    main { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+    main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
     section {
       background: white;
       border-radius: 16px;
       padding: 2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 0;
       box-shadow: 0 2px 12px rgba(0,0,0,0.07);
       border-top: 4px solid #ED1C24;
     }
@@ -90,6 +90,15 @@
       padding: 2rem;
       color: #555;
       font-size: 0.95rem;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    @media (max-width: 700px) {
+      .two-col { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -134,24 +143,20 @@
       <p><a class="btn" href="https://scratch.mit.edu" style="background:#ff6b35;">Start the Challenge</a></p>
     </section>
 
+    <div class="two-col">
     <section id="gallery">
       <h2>Made by Kids</h2>
       <p>Cool projects made by kids just like you. Want to be featured? Ask a parent to send a screenshot to <a href="mailto:gbrlgoldner@gmail.com">gbrlgoldner@gmail.com</a>!</p>
-      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:1rem; margin-top:1rem;">
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap:1rem; margin-top:1rem;">
         <div style="background:#f9f9f9; border-radius:12px; padding:1rem; text-align:center;">
-          <div style="font-size:3rem;">🐰</div>
+          <div style="font-size:2.5rem;">🐰</div>
           <p><strong>Kayla’s Cinnamoroll Game</strong></p>
-          <p style="font-size:0.9rem; color:#666;">Moved with arrows + math question</p>
+          <p style="font-size:0.85rem; color:#666;">Moved with arrows + math question</p>
         </div>
         <div style="background:#f9f9f9; border-radius:12px; padding:1rem; text-align:center;">
-          <div style="font-size:3rem;">⭐</div>
+          <div style="font-size:2.5rem;">⭐</div>
           <p><strong>Your project here!</strong></p>
-          <p style="font-size:0.9rem; color:#666;">Finish the monthly challenge and share</p>
-        </div>
-        <div style="background:#f9f9f9; border-radius:12px; padding:1rem; text-align:center;">
-          <div style="font-size:3rem;">🎮</div>
-          <p><strong>Friend’s Scratch Story</strong></p>
-          <p style="font-size:0.9rem; color:#666;">Coming soon</p>
+          <p style="font-size:0.85rem; color:#666;">Finish the monthly challenge and share</p>
         </div>
       </div>
     </section>
@@ -162,71 +167,67 @@
 
       <h3>Trusted Websites</h3>
       <ul>
-        <li><a href="https://scratch.mit.edu">Scratch</a> — Best starting point for ages 7–12. Drag-and-drop coding.</li>
-        <li><a href="https://code.org">Code.org</a> — Fun courses and Hour of Code activities for all ages.</li>
-        <li><a href="https://www.tynker.com">Tynker</a> — Games and projects that teach coding step by step.</li>
-        <li><a href="https://www.kodable.com">Kodable</a> — Great for younger kids (especially 2nd grade).</li>
-        <li><a href="https://www.scratchjr.org/">ScratchJr</a> — Perfect for younger kids (ages 5–7). No reading needed.</li>
-        <li><a href="https://codecombat.com/">CodeCombat</a> — Learn real coding by playing a game (free to start).</li>
-        <li><a href="https://www.khanacademy.org/computing">Khan Academy Computing</a> — Free coding courses from beginner to advanced.</li>
+        <li><a href="https://scratch.mit.edu">Scratch</a> — Best starting point for ages 7–12.</li>
+        <li><a href="https://code.org">Code.org</a> — Fun courses and Hour of Code.</li>
+        <li><a href="https://www.tynker.com">Tynker</a> — Games and projects.</li>
+        <li><a href="https://www.kodable.com">Kodable</a> — Great for younger kids.</li>
+        <li><a href="https://www.scratchjr.org/">ScratchJr</a> — Ages 5–7, no reading needed.</li>
+        <li><a href="https://codecombat.com/">CodeCombat</a> — Learn by playing a game.</li>
+        <li><a href="https://www.khanacademy.org/computing">Khan Academy Computing</a> — Free courses.</li>
       </ul>
 
       <h3>Free YouTube Videos</h3>
       <ul>
-        <li><a href="https://www.youtube.com/watch?v=jXUZaf5D12A">Scratch Tutorial for Beginners</a> — Simple first project.</li>
-        <li><a href="https://www.youtube.com/results?search_query=code.org+for+kids">Code.org kids videos</a> — Search results with many short lessons.</li>
-        <li><a href="https://www.youtube.com/watch?v=6sO_7m6-2nE">How to start coding as a kid</a> — Parent-friendly overview.</li>
+        <li><a href="https://www.youtube.com/watch?v=jXUZaf5D12A">Scratch Tutorial for Beginners</a></li>
+        <li><a href="https://www.youtube.com/results?search_query=code.org+for+kids">Code.org kids videos</a></li>
+        <li><a href="https://www.youtube.com/watch?v=6sO_7m6-2nE">How to start coding as a kid</a></li>
       </ul>
 
       <h3>Start with Real Tools</h3>
-      <p>When kids are ready for more, these free tools are what real programmers use.</p>
       <ul>
-        <li><strong>VS Code</strong> — Free code editor from Microsoft. Kids can write Python, make websites, and see results right away.  
-          <a href="https://code.visualstudio.com/">Download VS Code</a> ·  
-          <a href="https://vscodeedu.com/">VS Code for Education</a> (online lessons, no install needed)</li>
-        <li><strong>GitHub</strong> — A free place to save and share your code (like a scrapbook for projects).  
-          <a href="https://github.com/">Create a free GitHub account</a> ·  
-          <a href="https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-git-and-github-in-vs-code/">GitHub + VS Code beginner guide</a></li>
+        <li><strong>VS Code</strong> — Free code editor. <a href="https://code.visualstudio.com/">Download</a> · <a href="https://vscodeedu.com/">VS Code for Education</a></li>
+        <li><strong>GitHub</strong> — Save and share code. <a href="https://github.com/">Create account</a></li>
       </ul>
 
       <h3>Why Learn Python?</h3>
-      <p>Python is one of the easiest real programming languages for kids. The words look almost like English, you can make games, drawings, and simple apps, and it’s used by people at Google, NASA, and game studios. Great next step after Scratch.</p>
+      <p>Easy real programming language. Words look like English. Great after Scratch.</p>
       <ul>
-        <li><a href="https://codeitlearn.com/">CodeIt — Python for Kids</a> — Free lessons and games that run in the browser (ages 8–14).</li>
-        <li><a href="https://www.mypycoding.org/">MyPy Coding</a> — Free one-on-one Python lessons for grades 2–8.</li>
-        <li><a href="https://kidspython.com/learn/">Kids Python</a> — Interactive Python course for grades 3–9 (free preview chapters).</li>
-        <li><a href="https://www.raspberrypi.org/community">Raspberry Pi Code Club Projects</a> — Free step-by-step Python projects for kids.</li>
-        <li><a href="https://www.youtube.com/results?search_query=python+for+kids">YouTube: Python for kids</a> — Short beginner videos.</li>
+        <li><a href="https://codeitlearn.com/">CodeIt — Python for Kids</a></li>
+        <li><a href="https://www.mypycoding.org/">MyPy Coding</a></li>
+        <li><a href="https://kidspython.com/learn/">Kids Python</a></li>
+        <li><a href="https://www.youtube.com/results?search_query=python+for+kids">YouTube: Python for kids</a></li>
       </ul>
     </section>
+    </div>
 
+    <div class="two-col">
     <section id="math">
       <h2>Math Made Easy</h2>
-      <p>Practice that feels like play. Good for 2nd grade basics and 5th grade skills.</p>
+      <p>Practice that feels like play. Good for 2nd and 5th grade.</p>
 
       <h3>Trusted Websites</h3>
       <ul>
-        <li><a href="https://www.khanacademy.org/math">Khan Academy Math</a> — Free lessons from early math through 5th grade and beyond.</li>
-        <li><a href="https://www.coolmath4kids.com">Cool Math 4 Kids</a> — Games and practice for elementary ages.</li>
-        <li><a href="https://www.prodigygame.com">Prodigy Math</a> — Game-based math practice (free version available).</li>
-        <li><a href="https://www.ixl.com">IXL Math</a> — Skill practice by grade (free limited access).</li>
-        <li><a href="https://www.mathplayground.com/">Math Playground</a> — Free math games for grades K–6.</li>
-        <li><a href="https://www.mathisfun.com/">Math is Fun</a> — Clear explanations and practice for elementary math.</li>
-        <li><a href="https://www.zearn.org/">Zearn Math</a> — Free K–8 math lessons with videos and practice.</li>
-        <li><a href="https://kidsdomath.com/">KidsDoMath</a> — Free math games with no ads or sign-up.</li>
+        <li><a href="https://www.khanacademy.org/math">Khan Academy Math</a> — Free lessons.</li>
+        <li><a href="https://www.coolmath4kids.com">Cool Math 4 Kids</a> — Games and practice.</li>
+        <li><a href="https://www.prodigygame.com">Prodigy Math</a> — Game-based practice.</li>
+        <li><a href="https://www.ixl.com">IXL Math</a> — Skill practice by grade.</li>
+        <li><a href="https://www.mathplayground.com/">Math Playground</a> — Free math games K–6.</li>
+        <li><a href="https://www.mathisfun.com/">Math is Fun</a> — Clear explanations.</li>
+        <li><a href="https://www.zearn.org/">Zearn Math</a> — Free K–8 lessons.</li>
+        <li><a href="https://kidsdomath.com/">KidsDoMath</a> — Free games, no ads.</li>
       </ul>
 
       <h3>Free YouTube Videos</h3>
       <ul>
-        <li><a href="https://www.youtube.com/@khanacademy">Khan Academy channel</a> — Clear explanations for elementary math.</li>
-        <li><a href="https://www.youtube.com/results?search_query=math+for+2nd+grade">2nd grade math videos</a> — Lots of short practice videos.</li>
-        <li><a href="https://www.youtube.com/results?search_query=5th+grade+math+explained">5th grade math explained</a> — Helpful for parents and kids.</li>
+        <li><a href="https://www.youtube.com/@khanacademy">Khan Academy channel</a></li>
+        <li><a href="https://www.youtube.com/results?search_query=math+for+2nd+grade">2nd grade math videos</a></li>
+        <li><a href="https://www.youtube.com/results?search_query=5th+grade+math+explained">5th grade math explained</a></li>
       </ul>
     </section>
 
     <section id="cheatsheets">
       <h2>Math Cheat Sheets</h2>
-      <p>Quick formulas and free printable sheets for elementary math (especially helpful for 2nd and 5th grade).</p>
+      <p>Quick formulas and free printable sheets.</p>
 
       <h3>Common Formulas</h3>
       <ul>
@@ -234,84 +235,86 @@
         <li><strong>Perimeter of a rectangle:</strong> 2 × (length + width)</li>
         <li><strong>Area of a triangle:</strong> ½ × base × height</li>
         <li><strong>Volume of a box:</strong> length × width × height</li>
-        <li><strong>Average (mean):</strong> add all numbers, then divide by how many numbers there are</li>
+        <li><strong>Average (mean):</strong> add all numbers, then divide by how many</li>
       </ul>
 
       <h3>Free Printable Cheat Sheets</h3>
       <ul>
-        <li><a href="https://thehomeschooldaily.com/free-math-reference-sheets-grades-4-6/">Free Math Reference Sheets (Grades 4–6)</a> — Lots of printable pages for place value, fractions, area, and more.</li>
-        <li><a href="https://www.dreambox.com/math/guides/elementary-math-formulas">Elementary Math Formulas</a> — Clear list of formulas with examples.</li>
-        <li><a href="https://www.teacherspayteachers.com/Product/FREE-Math-Cheat-Sheets-K2-35-Math-Reference-Pages-Student-Folder-Helper-17254685">Free K–2 and 3–5 Math Cheat Sheets</a> — Simple one-page references.</li>
-        <li><a href="https://www.youtube.com/results?search_query=elementary+math+formulas+cheat+sheet">YouTube: Math formula videos for kids</a> — Short explanations.</li>
+        <li><a href="https://thehomeschooldaily.com/free-math-reference-sheets-grades-4-6/">Free Math Reference Sheets (Grades 4–6)</a></li>
+        <li><a href="https://www.dreambox.com/math/guides/elementary-math-formulas">Elementary Math Formulas</a></li>
+        <li><a href="https://www.teacherspayteachers.com/Product/FREE-Math-Cheat-Sheets-K2-35-Math-Reference-Pages-Student-Folder-Helper-17254685">Free K–2 and 3–5 Math Cheat Sheets</a></li>
+        <li><a href="https://www.youtube.com/results?search_query=elementary+math+formulas+cheat+sheet">YouTube: Math formula videos</a></li>
       </ul>
     </section>
+    </div>
 
+    <div class="two-col">
     <section id="ai-quantum">
       <h2>What Is AI? What Is Quantum?</h2>
-      <p>Curious about the big ideas? Here are simple explanations and free places to learn more.</p>
+      <p>Curious about the big ideas? Simple explanations and free places to learn more.</p>
 
-      <h3>What is AI (Artificial Intelligence)?</h3>
-      <p>AI is a computer program that learns from lots of examples, just like you learn from seeing many pictures of cats. It can recognize things, answer questions, or make pictures — but it is not alive and it can make mistakes. Always check what it says!</p>
+      <h3>What is AI?</h3>
+      <p>AI is a computer program that learns from examples. It can recognize things or answer questions, but it is not alive and can make mistakes. Always check what it says!</p>
       <ul>
-        <li><a href="https://www.aieducationforkids.com/ai-explained-simply-for-kids">AI Explained Simply for Kids</a> — Easy 25-minute lesson.</li>
-        <li><a href="https://teachablemachine.withgoogle.com/">Google Teachable Machine</a> — Train your own AI with pictures (fun and free).</li>
-        <li><a href="https://www.bbc.co.uk/teach/articles/z97cs82">BBC Teach: Introducing AI</a> — Short video for ages 7–11.</li>
-        <li><a href="https://machinelearningforkids.co.uk/">Machine Learning for Kids</a> — Hands-on projects (great for 5th grade).</li>
+        <li><a href="https://www.aieducationforkids.com/ai-explained-simply-for-kids">AI Explained Simply for Kids</a></li>
+        <li><a href="https://teachablemachine.withgoogle.com/">Google Teachable Machine</a></li>
+        <li><a href="https://www.bbc.co.uk/teach/articles/z97cs82">BBC Teach: Introducing AI</a></li>
+        <li><a href="https://machinelearningforkids.co.uk/">Machine Learning for Kids</a></li>
       </ul>
 
       <h3>What is Quantum Computing?</h3>
-      <p>Normal computers use bits that are either 0 or 1 (like a light switch that is on or off). Quantum computers use special bits called qubits that can be both at the same time — like a coin spinning in the air. This lets them try many answers at once for certain hard problems.</p>
+      <p>Normal computers use bits that are 0 or 1. Quantum computers use qubits that can be both at the same time.</p>
       <ul>
-        <li><a href="https://kids.kiddle.co/Quantum_computer">Quantum Computer Facts for Kids</a> — Simple encyclopedia page.</li>
-        <li><a href="https://www.diy.org/article/quantum_computing">DIY.org: Quantum Computing Facts for Kids</a> — Easy reading with pictures.</li>
-        <li><a href="https://qiskit.org/activities/quantum-activity-pack-for-kids.pdf">Quantum Activity Pack for Kids (PDF)</a> — Free printable activities.</li>
-        <li><a href="https://www.youtube.com/results?search_query=quantum+computing+for+kids">YouTube: Quantum for kids</a> — Short fun videos.</li>
+        <li><a href="https://kids.kiddle.co/Quantum_computer">Quantum Computer Facts for Kids</a></li>
+        <li><a href="https://www.diy.org/article/quantum_computing">DIY.org: Quantum Computing Facts</a></li>
+        <li><a href="https://www.youtube.com/results?search_query=quantum+computing+for+kids">YouTube: Quantum for kids</a></li>
       </ul>
     </section>
 
     <section id="special-needs">
       <h2>Resources for Kids with Special Needs</h2>
-      <p>These free tools can help kids who learn differently (ADHD, autism, dyslexia, and other learning differences). Many work well with short sessions and visual learning.</p>
+      <p>Free tools that can help kids who learn differently (ADHD, autism, dyslexia, and other learning differences).</p>
 
       <h3>Coding & Logic</h3>
       <ul>
-        <li><a href="https://www.scratchjr.org/">ScratchJr</a> — No reading needed. Great for younger kids and visual learners.</li>
-        <li><a href="https://scratch.mit.edu">Scratch</a> — Instant visual feedback. Helpful for kids who like seeing results right away.</li>
-        <li><a href="https://code.org">Code.org</a> — Structured lessons with clear steps. Good for predictable learning.</li>
-        <li><a href="https://www.khanacademy.org/computing">Khan Academy Computing</a> — Short videos you can pause and replay.</li>
+        <li><a href="https://www.scratchjr.org/">ScratchJr</a> — No reading needed.</li>
+        <li><a href="https://scratch.mit.edu">Scratch</a> — Instant visual feedback.</li>
+        <li><a href="https://code.org">Code.org</a> — Structured lessons.</li>
+        <li><a href="https://www.khanacademy.org/computing">Khan Academy Computing</a> — Short videos.</li>
       </ul>
 
       <h3>Math</h3>
       <ul>
-        <li><a href="https://www.khanacademy.org/math">Khan Academy Math</a> — Short videos, visual explanations, and practice at your own pace.</li>
-        <li><a href="https://www.mathplayground.com/">Math Playground</a> — Games with clear goals and immediate feedback.</li>
-        <li><a href="https://www.mathisfun.com/">Math is Fun</a> — Simple explanations with pictures.</li>
-        <li><a href="https://kidsdomath.com/">KidsDoMath</a> — Free games with no ads or sign-up.</li>
+        <li><a href="https://www.khanacademy.org/math">Khan Academy Math</a> — Visual explanations.</li>
+        <li><a href="https://www.mathplayground.com/">Math Playground</a> — Games with clear goals.</li>
+        <li><a href="https://www.mathisfun.com/">Math is Fun</a> — Simple explanations.</li>
+        <li><a href="https://kidsdomath.com/">KidsDoMath</a> — Free games, no ads.</li>
       </ul>
 
       <h3>Parent Resources</h3>
       <ul>
-        <li><a href="https://www.commonsensemedia.org/">Common Sense Media</a> — Reviews of apps and sites for different ages and needs.</li>
-        <li><a href="https://www.autismspeaks.org/virtual-activities-kids-autism">Autism Speaks – Virtual Activities</a> — Free activities and resources for kids with autism.</li>
-        <li><a href="https://www.understood.org/">Understood.org</a> — Free guides for parents of kids with learning and attention issues.</li>
+        <li><a href="https://www.commonsensemedia.org/">Common Sense Media</a></li>
+        <li><a href="https://www.autismspeaks.org/virtual-activities-kids-autism">Autism Speaks</a></li>
+        <li><a href="https://www.understood.org/">Understood.org</a></li>
       </ul>
-      <p style="margin-top:1rem; font-size:0.95rem;">Tip: Start with short sessions (10–15 minutes) and take breaks. Many of these tools let kids go at their own speed.</p>
     </section>
+    </div>
 
+    <div class="two-col">
     <section id="safety">
       <h2>Kids Online Safety</h2>
-      <p>This site is made for kids and parents. Here are simple safety tips:</p>
+      <p>Simple safety tips for kids and parents.</p>
       <ul>
-        <li><strong>Stay with an adult.</strong> Kids should use the internet with a parent or trusted adult nearby.</li>
-        <li><strong>Never share personal information.</strong> Do not type your real name, school, address, phone number, or photos online.</li>
-        <li><strong>Use the free versions only.</strong> All links go to free educational sites. No accounts or payments are needed to start.</li>
-        <li><strong>Check what you see.</strong> If something feels wrong or confusing, stop and ask a parent.</li>
+        <li><strong>Stay with an adult.</strong> Kids should use the internet with a parent nearby.</li>
+        <li><strong>Never share personal information.</strong> Do not type your real name, school, or address online.</li>
+        <li><strong>Use the free versions only.</strong> No accounts or payments needed to start.</li>
+        <li><strong>Check what you see.</strong> If something feels wrong, stop and ask a parent.</li>
         <li><strong>Be kind online.</strong> Treat others the way you want to be treated.</li>
       </ul>
-      <p style="margin-top:1rem;">Helpful free resources for parents:</p>
+      <p style="margin-top:1rem;">Helpful resources:</p>
       <ul>
-        <li><a href="https://www.commonsensemedia.org/">Common Sense Media</a> — Reviews and safety tips for kids’ apps and websites.</li>
-        <li><a href="https://www.consumer.ftc.gov/articles/protecting-your-childs-privacy-online">FTC: Protecting Your Child’s Privacy Online</a> — Official safety guidance.</li>
+        <li><a href="https://www.commonsensemedia.org/">Common Sense Media</a></li>
+        <li><a href="https://www.consumer.ftc.gov/articles/protecting-your-childs-privacy-online">FTC: Protecting Your Child’s Privacy</a></li>
       </ul>
     </section>
 
@@ -319,13 +322,14 @@
       <h2>How to Start Today</h2>
       <p>Simple tips for parents of a 2nd or 5th grader.</p>
       <ul>
-        <li><strong>Pick one thing.</strong> Choose either Scratch (coding) or Khan Academy (math) and spend 15–20 minutes together.</li>
-        <li><strong>Sit with them the first time.</strong> Kids do better when a parent is nearby for the first session.</li>
-        <li><strong>Celebrate small wins.</strong> Finished a Scratch project or a math lesson? High-five and stop. Short sessions work best.</li>
-        <li><strong>Keep it free.</strong> All the links above have free versions. No accounts required to start.</li>
+        <li><strong>Pick one thing.</strong> Choose Scratch or Khan Academy and spend 15–20 minutes together.</li>
+        <li><strong>Sit with them the first time.</strong> Kids do better when a parent is nearby.</li>
+        <li><strong>Celebrate small wins.</strong> Finished something? High-five and stop.</li>
+        <li><strong>Keep it free.</strong> All links have free versions. No accounts required to start.</li>
       </ul>
       <p style="margin-top:1.5rem;"><a class="btn" href="#coding">Go back to Coding</a></p>
     </section>
+    </div>
   </main>
 
   <footer style="font-size:0.85rem; line-height:1.5; max-width:800px; margin:0 auto; padding:2rem 1.5rem;">
